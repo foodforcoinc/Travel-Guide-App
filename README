@@ -1,35 +1,31 @@
 # Travel Guide App
 
-A personalized travel guide app that matches users with guide personas for local recommendations.
+A personalized travel guide app that connects users with curated guide personas based on shared tastes and background characteristics.
 
-## Quick Context
-- **Core Feature**: "Right Now" guided flow for immediate recommendations
-- **Key Components**: Guide personas, venue database, matching system
-- **Current Phase**: Prototyping
+## Core Features
+- User-Guide Matching System (Taste & Background Alignment)
+- Personalized Guide Access
+- "Right Now" Guided Recommendations
+- Privacy-Focused Profile Matching
 
-## Key Features
-- Personalized guide matching
-- "Right Now" guided recommendation flow
-- Local venue database
-- Guide persona profiles
+## Project Structure
+- `/docs` - Documentation and planning
+  - `app-idea.md` - Core concept and features
+  - `ARCHITECTURE.md` - System design (coming soon)
+  - `CONTRIBUTING.md` - Development guidelines (coming soon)
+- `/prototype` - Design files and prototypes (coming soon)
+  - `/flows` - User journey prototypes
+  - `/components` - UI component designs
 
 ## Development Status
-- [x] Initial concept documentation
-- [x] Guide persona schema
+Currently in planning/prototyping phase:
+- [x] Core concept documentation
+- [x] User-Guide matching system design
 - [x] Venue database structure
-- [ ] Prototype Phase 1
-- [ ] User testing
-
-## Documentation
-- [Full App Concept](app-idea.md)
-- [Development Progress](#) (Coming soon)
-- [Prototype](#) (Coming soon)
-
-## Next Steps
-1. Develop initial prototype
-2. Create guide persona profiles
-3. Build recommendation database
-4. Design user interface
+- [ ] Initial prototype development
+- [ ] User flow testing
 
 ## Getting Started
-(Development setup instructions coming soon)
+1. Review [app-idea.md](docs/app-idea.md) for full concept
+2. Check project board for current tasks
+3. See issues for specific development items
