@@ -1,0 +1,19 @@
+# Travel Guide App
+
+A personalized travel guide app that matches users with guide personas for local recommendations.
+
+## Quick Context
+- **Core Feature**: "Right Now" guided flow for immediate recommendations
+- **Key Components**: Guide personas, venue database, matching system
+- **Current Phase**: Prototyping
+
+## Important Files
+- [Full App Concept](docs/app-idea.md)
+- [Architecture Details](docs/ARCHITECTURE.md)
+- [Prototype Progress](prototype/README.md)
+
+## Development Status
+- [x] Initial concept documentation
+- [x] Guide persona schema
+- [x] Venue database structure
+- [ ] Prototype Phase 1
