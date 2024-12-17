@@ -7,13 +7,29 @@ A personalized travel guide app that matches users with guide personas for local
 - **Key Components**: Guide personas, venue database, matching system
 - **Current Phase**: Prototyping
 
-## Important Files
-- [Full App Concept](docs/app-idea.md)
-- [Architecture Details](docs/ARCHITECTURE.md)
-- [Prototype Progress](prototype/README.md)
+## Key Features
+- Personalized guide matching
+- "Right Now" guided recommendation flow
+- Local venue database
+- Guide persona profiles
 
 ## Development Status
 - [x] Initial concept documentation
 - [x] Guide persona schema
 - [x] Venue database structure
 - [ ] Prototype Phase 1
+- [ ] User testing
+
+## Documentation
+- [Full App Concept](app-idea.md)
+- [Development Progress](#) (Coming soon)
+- [Prototype](#) (Coming soon)
+
+## Next Steps
+1. Develop initial prototype
+2. Create guide persona profiles
+3. Build recommendation database
+4. Design user interface
+
+## Getting Started
+(Development setup instructions coming soon)
