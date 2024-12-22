@@ -1,9 +1,101 @@
-# Personalized Travel Guide App
+# Travel Guide App
 
 ## Core Concept
 A travel app that connects users with curated guide personas based on shared tastes and background characteristics. Users build trust through meaningful matches, then can access detailed city guides from personas they resonate with.
 
-## Primary User Journey
+## App Flow Stages
+1. User Onboarding & Profile Creation
+   - Account creation
+   - User preferences
+   - Travel style definition
+
+2. City & Persona/Guide Selection
+   - City/destination selection
+   - Persona matching process
+   - Persona browsing
+   - Guide access purchase
+
+3. Right Now Recommendations
+   - Real-time recommendations from matched guides
+   - Location-based suggestions
+   - Immediate assistance for food/drinks/activities
+
+4. Trip Planning
+   - Advance itinerary creation
+   - Multi-day recommendations
+   - Scheduled activities
+
+5. Social & Community
+   - Past recommendations history
+   - Favorite places collection
+   - Guide reviews/ratings
+
+## Key Features
+
+### User-Guide Matching System
+1. Taste Alignment
+   #### Preference Indicators
+   - Dining style (casual to fine dining)
+   - Cuisine preferences
+   - Bar/nightlife vibe
+   - Activity types
+   - Travel pace/style
+   - Budget comfort zone
+
+   #### Validation Methods
+   1. Direct Selection
+      - Choose favorite local spots
+      - Rate sample venues
+      - Select preferred activities
+
+   2. Behavioral Data
+      - Saved venues
+      - Followed recommendations
+      - Actual visits/check-ins
+
+2. Background Alignment
+   #### Personal Identifiers (Private)
+   - Gender Identity
+   - Cultural Background/Ethnicity
+   - Languages
+   - LGBTQ+ Identity
+   - Accessibility Needs
+   - Age Range
+   - Family Travel (children/pets)
+
+   #### Optional Identifiers
+   - Astrological Sign
+   - Myers-Briggs Type
+   - Enneagram
+   - Other personality frameworks
+
+### Matching Display
+#### Public View
+- Taste Match Percentage
+- Number of Background Alignments
+- Shared Favorite Spots
+- Common Interests
+
+#### Private View (User Only)
+- Detailed Taste Alignment
+  * Dining style match %
+  * Activity preferences match %
+  * Travel style alignment %
+  * Specific shared favorite spots
+
+- Background Connection Points
+  * "You match on: Gender Identity, Cultural Background, Age Range"
+  * "You share interests in: Astrology, Myers-Briggs"
+  * Total number of matching points
+  
+- Never Shown:
+  * Specific personal information about guide
+  * Actual values of matching fields
+  * Private guide details
+
+## Detailed Flows
+
+### Primary User Journey
 1. Initial Profile Creation
    - Complete taste questionnaire
    - Add background characteristics (private)
@@ -22,65 +114,7 @@ A travel app that connects users with curated guide personas based on shared tas
    - View personalized recommendations
    - Navigate guide content
 
-## User-Guide Matching System
-
-1. Taste Alignment
-   ### Preference Indicators
-   - Dining style (casual to fine dining)
-   - Cuisine preferences
-   - Bar/nightlife vibe
-   - Activity types
-   - Travel pace/style
-   - Budget comfort zone
-
-   ### Validation Methods
-   1. Direct Selection
-      - Choose favorite local spots
-      - Rate sample venues
-      - Select preferred activities
-
-2. Background Alignment
-   ### Personal Identifiers (Private)
-   - Gender Identity
-   - Cultural Background/Ethnicity
-   - Languages
-   - LGBTQ+ Identity
-   - Accessibility Needs
-   - Age Range
-   - Family Travel (children/pets)
-
-   ### Optional Identifiers
-   - Astrological Sign
-   - Myers-Briggs Type
-   - Enneagram
-   - Other personality frameworks
-
-## Matching Display
-### Public View
-- Taste Match Percentage
-- Number of Background Alignments
-- Shared Favorite Spots
-- Common Interests
-
-### Private View (User Only)
-- Detailed Taste Alignment
-  * Dining style match %
-  * Activity preferences match %
-  * Travel style alignment %
-  * Specific shared favorite spots
-
-- Background Connection Points
-  * "You match on: Gender Identity, Cultural Background, Age Range"
-  * "You share interests in: Astrology, Myers-Briggs"
-  * Total number of matching points
-  
-- Never Shown:
-  * Specific personal information about guide
-  * Actual values of matching fields
-  * Private guide details
-
-## "Right Now" Guided Flow
-
+### Right Now Flow
 1. Essential Filters First
    "Let's find something for you to do right now..."
    - Group Size?
@@ -94,6 +128,7 @@ A travel app that connects users with curated guide personas based on shared tas
    - Activities
    [Can select multiple]
 
+3. Branching Questions Based on Selections:
    IF COFFEE SELECTED:
    - "What kind of coffee spot are you looking for?"
      * Quick coffee to go
@@ -107,8 +142,6 @@ A travel app that connects users with curated guide personas based on shared tas
      * Meeting spot
      * Outdoor seating
      * [etc.]
-
-3. Branching Questions Based on Selections:
 
    IF FOOD SELECTED:
    - "What are you craving?"
@@ -164,9 +197,107 @@ A travel app that connects users with curated guide personas based on shared tas
    - Map view option
    - Easy filters to refine further
 
-# Local Experience Seeker - Austin Recommendations Database
+## Technical Implementation
 
-## Food Recommendations
+### Venue Database Structure
+#### Core Attributes
+1. Basic Information
+   - Type (Food, Drinks, Activity, etc.)
+   - Location/Area
+   - Price range
+   - Hours
+   - Indoor/Outdoor options
+
+2. Atmosphere
+   - Energy level (Quiet to Lively)
+   - Noise level
+   - Typical crowd
+   - Overall vibe
+   - Dress code/style
+
+3. Special Considerations
+   - Kid-friendly
+   - Pet-friendly
+   - Accessibility features
+   - Group size limitations
+   - Reservation requirements
+
+4. Guide Context
+   - Guide's notes/tips
+   - Best times to visit
+   - Related recommendations
+   - Insider knowledge
+
+#### Tagging System
+1. Experience Tags
+   - Instagram-worthy
+   - Hidden Gem
+   - Local Favorite
+   - Tourist Spot
+   - Up-and-Coming
+   - Classic/Institution
+
+2. Activity Tags
+   - Quick Visit
+   - Leisurely Experience
+   - Special Occasion
+   - Casual Hangout
+   - Group Activity
+   - Solo-Friendly
+
+3. Seasonal/Timing Tags
+   - Seasonal Activities
+   - Weather Dependent
+   - Time-Specific Events
+   - Peak Hours
+   - Off-Peak Specials
+
+### UI Components
+#### Venue Card Layout
+##### Card Design
+- **Background Image**: Venue photo (blurred/dimmed)
+  
+##### Overlay Elements
+- **Venue Name**: "Café XYZ"
+  - Font: Bold, large size, contrasting color
+- **Icons**: 
+  - Positioned at the bottom or top of the card
+  - Example: [🍽️] [☕] [🍹]
+  
+- **Word Tags**: 
+  - Positioned below the venue name
+  - Example: "Busy" | "$" | "Casual"
+  - Font: Smaller size, legible color
+
+#### Venue Card Component - Figma Layout
+##### Frame Dimensions
+- Grid View: 320px × 200px
+- List View: 360px × 100px
+
+##### Layer Structure
+1. Base Card
+   - Background Image
+   - Gradient Overlay (for text legibility)
+   - Shadow/Border
+
+2. Content Container
+   - Padding: 16px
+   - Flex layout
+
+3. Text Elements
+   - Venue Name (20px, Bold)
+   - Category Icons (16px)
+   - Status Tags (14px)
+
+4. Action Elements
+   - Save/Favorite
+   - Quick Actions
+
+#Sample Data section
+
+### Persona 1 - Austin Recommendations Database
+
+#### Food Recommendations
 
 1. Jo's Coffee
 - Type: Coffee Shop/Bar/Food Trucks
@@ -288,7 +419,7 @@ A travel app that connects users with curated guide personas based on shared tas
   - Dinner
   - Late Night Food
 
-## Drink Recommendations
+#### Drink Recommendations
 
 1. Yellow Jacket Social Club
 - Type: Neighborhood Bar
@@ -397,7 +528,7 @@ A travel app that connects users with curated guide personas based on shared tas
   - Live Events
   - Cash Only
 
-## Activity Recommendations
+#### Activity Recommendations
 
 1. Lady Bird Lake Trail
 - Type: Outdoor Activity
@@ -505,241 +636,6 @@ A travel app that connects users with curated guide personas based on shared tas
   - Good for Groups
   - Natural Feature
 
-# Sample User Journey - "Right Now" Flow
-
-START: User opens app at 7pm on a Tuesday
-
-1. Essential Filters
-   App: "Let's find something for you to do right now..."
-   User Selects:
-   - Group Size: "Couple/Pair"
-   - Special Requirements: "None"
-
-2. Interest Exploration
-   App: "What kind of experience are you looking for?"
-   User Selects: "Food & Drinks"
-   [Multiple selection allows for dinner + drinks recommendations]
-
-3. Food Preferences
-   App: "What are you craving?"
-   User Selects: "Asian"
-   
-   App: "Any preferences for the spot?"
-   User Selects: "Restaurant"
-
-4. Drink Preferences
-   App: "What's your drink style?"
-   User Selects: "Craft Cocktails"
-
-5. Location/Transport
-   App: "How far do you want to go?"
-   User Selects: "Short ride (within 2 miles)"
-   [Map shows radius]
-
-6. Vibe Check
-   App: "What kind of atmosphere are you looking for?"
-   User Selects: 
-   - "Moderate energy"
-   - "Casual"
-
-RESULTS DISPLAYED:
-
-1. MULTI-CATEGORY MATCHES
-   - Café XYZ (Food, Drinks, Coffee)
-     * Price: $$
-     * Distance: 0.2 miles
-   - Restaurant ABC (Food, Drinks)
-     * Price: $$$
-     * Distance: 0.5 miles
-
-2. TWO-CATEGORY MATCHES
-   - Bar 123 (Drinks, Food)
-     * Price: $$
-     * Distance: 0.3 miles
-
-3. SINGLE-CATEGORY MATCHES
-   FOOD
-   - Taco Place (Food)
-     * Price: $
-     * Distance: 0.4 miles
-
-   COFFEE
-   - Coffee Shop A (Coffee)
-     * Price: $
-     * Distance: 0.1 miles
-
-   DRINKS
-   - Brewery B (Drinks)
-     * Price: $$
-     * Distance: 0.6 miles
-
-4. REORDER OPTIONS
-   - [Proximity] [Price Point] [Time Availability]
-
-# Venue Card Layout
-
-## Card Design
-- **Background Image**: Venue photo (blurred/dimmed)
-  
-### Overlay Elements
-- **Venue Name**: "Café XYZ"
-  - Font: Bold, large size, contrasting color
-- **Icons**: 
-  - Positioned at the bottom or top of the card
-  - Example: [🍽️] [☕] [🍹]
-  
-- **Word Tags**: 
-  - Positioned below the venue name
-  - Example: "Busy" | "$" | "Casual"
-  - Font: Smaller size, legible color
-
-# Venue Card Component - Figma Layout
-
-## Frame Dimensions
-- Grid View: 320px × 200px
-- List View: 360px × 100px
-
-## Layer Structure
-1. Base Card
-   - Background Image
-   - Gradient Overlay (for text legibility)
-   - Shadow/Border
-
-2. Content Container
-   - Padding: 16px
-   - Flex layout
-
-3. Text Elements
-   - Venue Name (20px, Bold)
-   - Category Icons (16px)
-   - Status Tags (14px)
-
-4. Action Elements
-   - Save/Favorite
-   - Quick Actions
-
-https://github.com/foodforcoinc/Travel-Guide-App
-Flow inspiration:https://philome.la/Coinc/sxsw-twine/play/index.html
-
-# User-Guide Matching System
-
-## 1. Taste Alignment
-### Preference Indicators
-- Dining style (casual to fine dining)
-- Cuisine preferences
-- Bar/nightlife vibe
-- Activity types
-- Travel pace/style
-- Budget comfort zone
-
-### Validation Methods
-1. Direct Selection
-   - Choose favorite local spots
-   - Rate sample venues
-   - Select preferred activities
-
-2. Behavioral Data
-   - Saved venues
-   - Followed recommendations
-   - Actual visits/check-ins
-
-## 2. Background Alignment
-### Personal Identifiers (Private)
-- Gender Identity
-- Cultural Background/Ethnicity
-- Languages
-- LGBTQ+ Identity
-- Accessibility Needs
-- Age Range
-- Family Travel (children/pets)
-
-### Optional Identifiers
-- Astrological Sign
-- Myers-Briggs Type
-- Enneagram
-- Other personality frameworks
-
-## Matching Display
-### Public View
-- Taste Match Percentage
-- Number of Background Alignments
-- Shared Favorite Spots
-- Common Interests
-
-### Private View (User Only)
-- Detailed Taste Alignment
-  * Dining style match %
-  * Activity preferences match %
-  * Travel style alignment %
-  * Specific shared favorite spots
-
-- Background Connection Points
-  * "You match on: Gender Identity, Cultural Background, Age Range"
-  * "You share interests in: Astrology, Myers-Briggs"
-  * Total number of matching points
-  
-- Never Shown:
-  * Specific personal information about guide
-  * Actual values of matching fields
-  * Private guide details
-
-## Venue Database Structure
-
-### Core Attributes
-1. Basic Information
-   - Type (Food, Drinks, Activity, etc.)
-   - Location/Area
-   - Price range
-   - Hours
-   - Indoor/Outdoor options
-
-2. Atmosphere
-   - Energy level (Quiet to Lively)
-   - Noise level
-   - Typical crowd
-   - Overall vibe
-   - Dress code/style
-
-3. Special Considerations
-   - Kid-friendly
-   - Pet-friendly
-   - Accessibility features
-   - Group size limitations
-   - Reservation requirements
-
-4. Guide Context
-   - Guide's notes/tips
-   - Best times to visit
-   - Related recommendations
-   - Insider knowledge
-
-### Tagging System
-1. Experience Tags
-   - Instagram-worthy
-   - Hidden Gem
-   - Local Favorite
-   - Tourist Spot
-   - Up-and-Coming
-   - Classic/Institution
-
-2. Activity Tags
-   - Quick Visit
-   - Leisurely Experience
-   - Special Occasion
-   - Casual Hangout
-   - Group Activity
-   - Solo-Friendly
-
-3. Seasonal/Timing Tags
-   - Seasonal Activities
-   - Weather Dependent
-   - Time-Specific Events
-   - Peak Hours
-   - Off-Peak Specials
-
-### Sample Venue Entry
-[Example venue with full attribute set to demonstrate structure]
-
 ## TODO Next Steps
 ### Documentation Updates Needed
 - Clarify Right Now flow definition and scope
@@ -754,4 +650,9 @@ Flow inspiration:https://philome.la/Coinc/sxsw-twine/play/index.html
 
 ### Next Session Goals
 1. Review and update Right Now flow documentation
-2. Begin user journey mapping once scope is clear
+2. Validate assumptions with team
+3. Begin user journey mapping once scope is clear
+
+## References
+- GitHub Repository: https://github.com/foodforcoinc/Travel-Guide-App
+- Flow Inspiration: https://philome.la/Coinc/sxsw-twine/play/index.html
