@@ -1,0 +1,31 @@
+# Travel Guide App
+
+A personalized travel guide app that connects users with curated guide personas based on shared tastes and background characteristics.
+
+## Core Features
+- User-Guide Matching System (Taste & Background Alignment)
+- Personalized Guide Access
+- "Right Now" Guided Recommendations
+- Privacy-Focused Profile Matching
+
+## Project Structure
+- `/docs` - Documentation and planning
+  - `app-idea.md` - Core concept and features
+  - `ARCHITECTURE.md` - System design (coming soon)
+  - `CONTRIBUTING.md` - Development guidelines (coming soon)
+- `/prototype` - Design files and prototypes (coming soon)
+  - `/flows` - User journey prototypes
+  - `/components` - UI component designs
+
+## Development Status
+Currently in planning/prototyping phase:
+- [x] Core concept documentation
+- [x] User-Guide matching system design
+- [x] Venue database structure
+- [ ] Initial prototype development
+- [ ] User flow testing
+
+## Getting Started
+1. Review [app-idea.md](docs/app-idea.md) for full concept
+2. Check project board for current tasks
+3. See issues for specific development items
