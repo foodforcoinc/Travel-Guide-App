@@ -739,3 +739,19 @@ Flow inspiration:https://philome.la/Coinc/sxsw-twine/play/index.html
 
 ### Sample Venue Entry
 [Example venue with full attribute set to demonstrate structure]
+
+## TODO Next Steps
+### Documentation Updates Needed
+- Clarify Right Now flow definition and scope
+- Document assumptions for Right Now feature
+- Define user journey specifics
+- Distinguish from other app flows
+
+### Right Now Flow Development
+- [BLOCKED] User journey mapping (waiting on documentation clarity)
+- [BLOCKED] UI wireframes (waiting on journey mapping)
+- [BLOCKED] API endpoints (waiting on journey mapping)
+
+### Next Session Goals
+1. Review and update Right Now flow documentation
+2. Begin user journey mapping once scope is clear

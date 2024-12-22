@@ -7,11 +7,11 @@ rules:
     - "Follow the defined user journey and matching system design"
 
   response_guidelines:
-    - "Acknowledge which parts of context influenced the response"
-    - "Highlight any deviations from documented approach"
-    - "Reference relevant issues or documentation sections"
-    - "Maintain focus on current development phase"
-    - "Flag if additional context is needed"
+    - "Only provide reasoning when explicitly requested"
+    - "Use footnote-style references when context is requested"
+    - "Keep responses focused on direct solutions"
+    - "Add context references at bottom of response if needed"
+    - "Flag critical context gaps with [!]"
 
   project_scope:
     phase: "planning_and_prototype"
