@@ -5,6 +5,7 @@ rules:
     - "Consider existing design decisions and project structure"
     - "Maintain consistency with established privacy-focused approach"
     - "Follow the defined user journey and matching system design"
+    - "Always assume we're working in a Windows Terminal"
 
   response_guidelines:
     - "Only provide reasoning when explicitly requested"
