@@ -54,6 +54,28 @@ A travel app that connects users with curated guide personas based on shared tas
 - Profile section cards
 - Quiz interface elements
 
+#### Account Creation Requirements
+1. Primary Contact (Required)
+   - Email OR Phone Number
+   - Must be verified
+   - Used for authentication
+
+2. Secondary Contact (Optional)
+   - Email OR Phone Number
+   - Can be added later
+   - Additional recovery option
+
+3. Basic Information
+   - Username/Display name
+   - Age verification
+     * Required: 18+ to create account
+     * Stored in profile for recommendation filtering
+     * Used to filter age-restricted venues (21+ in US)
+     * Affects drink recommendations
+   - Terms acceptance
+
+[Note: Location is not required at signup - can be detected for Right Now flow or selected for trip planning]
+
 ### 2. Persona Alignment/Matching
 
 #### Multi-City Handling
@@ -362,3 +384,94 @@ Vibe Check:
 ## References
 - GitHub Repository: https://github.com/foodforcoinc/Travel-Guide-App
 - Flow Inspiration: https://philome.la/Coinc/sxsw-twine/play/index.html
+
+#### Profile Requirements
+
+##### Core Required Elements
+1. Account Basics (from sign-up)
+   - Username/Display name
+   - Age (verified 18+)
+   - Primary Contact (Email OR Phone)
+   - Secondary Contact (optional)
+
+2. Personal Considerations
+   - Dietary restrictions/preferences
+   - Accessibility needs
+   - Food allergies
+   - Mobility requirements
+
+##### Profile Development
+1. Quick Start Questionnaire
+   - Location-based choices (e.g., "Pick your favorite spots in [city]")
+   - Scenario-based preferences (e.g., "For a night out, would you rather...")
+   - Visual choice sets (e.g., "Which of these spaces appeals to you most?")
+
+[Note: Basic preferences (dining style, activity level, budget, atmosphere) are derived from questionnaire responses and Right Now flow choices rather than direct input]
+
+#### Recommended Profile Elements
+
+##### Purpose
+These optional elements enhance the app's ability to connect users with guides who share similar backgrounds, experiences, or identities. By sharing this information, users receive more personally relevant recommendations, helping them find spaces where they'll feel welcomed, comfortable, and connected to community. This information is always private, optional, and used solely to improve guide matching and recommendation relevance.
+
+##### Identity & Community Elements (Optional)
+1. Cultural Background
+2. Gender Identity
+3. Orientation
+4. Languages Spoken
+
+##### Fun Extras (Optional)
+- Astrological Sign
+- Myers-Briggs Type
+- Enneagram Number
+- Other personality indicators
+
+[Note: All recommended elements are private, optional, and used only for matching and recommendation purposes. Interests and preferences are determined through questionnaire responses and app usage rather than explicit declaration. Fun Extras provide additional matching points for interested users but are not core to the matching algorithm.]
+
+#### Venue Tagging System Development
+
+##### Approach
+1. Natural Description Collection
+   - Gather descriptors people naturally use
+   - Focus on full guest experience
+   - Include various venue types
+   - Avoid predetermined categories
+
+2. Descriptor Lists
+   - Create comprehensive lists by venue type
+   - Include atmosphere, service style, features
+   - Consider regional/cultural variations
+   - Note common crossover terms
+
+3. Category Development
+   - Allow categories to emerge from descriptors
+   - Group similar experiences/features
+   - Identify primary vs secondary tags
+   - Consider search/filter implications
+
+##### Current Progress
+1. Initial Bar Descriptors (30)
+   [List of current bar descriptors]
+
+2. Initial Restaurant Descriptors (30)
+   [List of current restaurant descriptors]
+
+##### Next Steps
+1. Expand Descriptor Lists
+   - Add more venue types
+   - Include activity venues
+   - Consider cultural spaces
+   - Add missing experiences
+
+2. Identify Patterns
+   - Look for natural groupings
+   - Find common themes
+   - Note unique descriptors
+   - Consider cross-venue applications
+
+3. Develop Tagging Structure
+   - Create primary categories
+   - Define relationships between tags
+   - Establish hierarchy if needed
+   - Consider user search behavior
+
+[Note: Categories will be developed after collecting comprehensive descriptor lists to ensure organic, user-focused organization]
