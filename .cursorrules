@@ -1,7 +1,7 @@
 rules:
   context_instructions:
     - "Always reference app-idea.md for core concept understanding"
-    - "Check GitHub issues and project board for current development status"
+    - "Check README.md for current project status"
     - "Consider existing design decisions and project structure"
     - "Maintain consistency with established privacy-focused approach"
     - "Follow the defined user journey and matching system design"
@@ -14,10 +14,8 @@ rules:
     - "Add context references at bottom of response if needed"
     - "Flag critical context gaps with [!]"
 
-  project_scope:
-    phase: "planning_and_prototype"
-    focus: 
-      - "User-guide matching system"
-      - "Privacy-focused design"
-      - "Right Now flow"
-      - "Guide persona development"
+  interaction_scope:
+    - "Focus responses on implementation details"
+    - "Prioritize privacy and security considerations"
+    - "Consider scalability in suggested solutions"
+    - "Maintain consistency with existing documentation"

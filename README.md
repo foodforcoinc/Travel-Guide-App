@@ -4,28 +4,28 @@
 A travel app that connects users with curated guide personas based on shared tastes and background characteristics. Users build trust through meaningful matches, then can access detailed city guides from personas they resonate with.
 
 ## Current Status
-- Phase: Planning and Prototype Development
-- Focus: Core user flows and profile system design
+- Phase: Planning and Profile System Design
+- Focus: Quick Start questionnaire development
 - Documentation: See `/docs/app-idea.md` for detailed specifications
 
 ## Current Development
 1. Profile System
-   - Account creation requirements
-   - Core profile elements
-   - Optional profile features
-   - Privacy considerations
+   - Quick Start questionnaire design
+   - Response mapping to venue tags
+   - Profile building logic
+   - Match calculation approach
 
 2. Venue Classification
-   - Natural description collection
-   - Tagging system development
-   - Experience categorization
+   - Bar/Nightlife taxonomy
+   - Restaurant taxonomy
+   - Guide detail tags
    - Filter system design
 
 3. Next Steps
-   - Complete venue descriptor lists
-   - Develop tagging structure
-   - Design quick start questionnaire
-   - Build profile creation flow
+   - Design questionnaire format
+   - Create sample questions
+   - Map responses to venue tags
+   - Plan matching logic
 
 ## Documentation
 - Core Documentation: `/docs/app-idea.md`

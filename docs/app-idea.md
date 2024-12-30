@@ -33,15 +33,19 @@ A travel app that connects users with curated guide personas based on shared tas
   * Accessibility Needs
   * Age Range
   * Family Travel (children/pets)
-- Taste alignment indicators
+
+#### Profile Development
+- Visual progress bar showing completion percentage
+- Dynamic match quality indicator
+- Multiple quiz types
+- City-specific preference questions
+- Location-based responses
+
+#### Taste alignment indicators
   * Dining style preferences
   * Activity preferences
   * Travel style alignment
   * Specific favorite spots
-- Multiple quiz types
-- City-specific preference questions
-- Location-based responses
-- Optional personality/type indicators
 
 #### Incentives
 - Match quality improvements visible during profile completion
@@ -126,7 +130,6 @@ Never Shown:
   * Sample venues/activities
   * Without full context/timing details
   * Demonstrates guide's taste/style
-- Helps users evaluate guide fit before purchase
 
 #### UI Components
 - Match percentage display
@@ -136,7 +139,7 @@ Never Shown:
 
 ### 3. Right Now Flow
 
-#### Assumptions
+#### Core Assumptions
 1. User Assumptions
 - User already has matched with/purchased guide(s)
 - User is looking for immediate recommendations
@@ -155,88 +158,21 @@ Never Shown:
 - Recommendations account for current time/day
 - Tags and filters cover all common scenarios
 
-4. UX Assumptions
-- Users can easily modify/return to filters
-- Initial results appear with minimal filtering
-- Navigation between options is intuitive
-- Match quality indicators are clear
+#### Implementation
+1. Initial Question: "Looking for something specific?"
+2. Dynamic Questions Based on Selection:
+   - Food
+   - Coffee
+   - Drinks
+   - Activities
+   [Can select multiple]
 
-#### Core Filters
-"Let's find something for you to do right now..."
-- Group Size?
-- Any special requirements? (kids/pets/accessibility)
-- Essential characteristics
-
-#### Dynamic Questions
-"What kind of experience are you looking for?"
-- Food
-- Coffee
-- Drinks
-- Activities
-[Can select multiple]
-
-Branching Questions Based on Selections:
-IF COFFEE SELECTED:
-- "What kind of coffee spot are you looking for?"
-  * Quick coffee to go
-  * Coffee shop to work/hang
-  * Specialty coffee
-  * [etc.]
-
-- "Any specific preferences?"
-  * Quiet space
-  * Work-friendly
-  * Meeting spot
-  * Outdoor seating
-  * [etc.]
-
-IF FOOD SELECTED:
-- "What are you craving?"
-  * Mexican/Tex-Mex
-  * Asian (or specific: Thai, Japanese, etc.)
-  * Pizza
-  * Burgers
-  * BBQ
-  * Vegetarian/Vegan
-  * [etc.]
-- "Any preferences for the spot?"
-  * Restaurant
-  * Food Truck
-  * Counter Service
-  * Full Service
-  * [etc.]
-
-IF DRINKS SELECTED:
-- "What's your drink style?"
-  * Craft Cocktails
-  * Local Brewery
-  * Wine Bar
-  * Coffee/Tea
-  * Dive Bar
-  * Tiki
-  * [etc.]
-
-IF ACTIVITIES SELECTED:
-- "What kind of activity interests you?"
-  * Outdoor
-  * Arts/Culture
-  * Live Music
-  * Shopping
-  * [etc.]
-
-Location/Transport:
-"How far do you want to go?"
-- Walking distance
-- Short ride
-- Anywhere in city
-[Shows map with radius]
-
-Vibe Check:
-"What kind of atmosphere are you looking for?"
-[Only relevant options based on previous selections]
-- Lively vs. Chill
-- Casual vs. Upscale
-[etc.]
+3. Location/Transport:
+   "How far do you want to go?"
+   - Walking distance
+   - Short ride
+   - Anywhere in city
+   [Shows map with radius]
 
 #### Results Navigation
 - All matching recommendations remain accessible
@@ -427,51 +363,359 @@ These optional elements enhance the app's ability to connect users with guides w
 
 [Note: All recommended elements are private, optional, and used only for matching and recommendation purposes. Interests and preferences are determined through questionnaire responses and app usage rather than explicit declaration. Fun Extras provide additional matching points for interested users but are not core to the matching algorithm.]
 
-#### Venue Tagging System Development
+#### Venue Tagging System
 
-##### Approach
-1. Natural Description Collection
-   - Gather descriptors people naturally use
-   - Focus on full guest experience
-   - Include various venue types
-   - Avoid predetermined categories
+##### Theme/Concept Tags
+Primary venue identity/focus:
+- Speakeasy
+- Tiki
+- Sports bar
+- Brewery
+- Wine bar
+- Gastropub
+- Cocktail lounge
+- Pub
+- Dive
+- Jazz club
+- Piano bar
 
-2. Descriptor Lists
-   - Create comprehensive lists by venue type
-   - Include atmosphere, service style, features
-   - Consider regional/cultural variations
-   - Note common crossover terms
+##### Design Tags
+Physical aesthetic/decor:
+- Industrial
+- Vintage
+- Modern
+- Upscale
+- Casual
 
-3. Category Development
-   - Allow categories to emerge from descriptors
-   - Group similar experiences/features
-   - Identify primary vs secondary tags
-   - Consider search/filter implications
+##### Atmosphere Tags
+- Cozy
+- Intimate
+- Lively
+- Quiet conversation
+- Loud/energetic
+- Dimly lit
+- Bright
+- Moody
+- Sophisticated
+- Communal
+- Private
+- Spacious
+- Rowdy
+- Chill
+- Romantic
 
-##### Current Progress
-1. Initial Bar Descriptors (30)
-   [List of current bar descriptors]
+##### Features/Activities Tags
+- Pool table
+- Arcade
+- Game room
+- Dancing
+- Live music
+- Karaoke
+- Trivia night
 
-2. Initial Restaurant Descriptors (30)
-   [List of current restaurant descriptors]
+##### Space Characteristics
+- Rooftop
+- Underground
+- Outdoor seating
+- Patio
+- Beer garden
 
-##### Next Steps
-1. Expand Descriptor Lists
-   - Add more venue types
-   - Include activity venues
-   - Consider cultural spaces
-   - Add missing experiences
+##### Scene/Crowd Tags
+- College crowd
+- Industry hangout
+- Local hangout
+- LGBTQ+
+- Date spot
+- Late-night
 
-2. Identify Patterns
-   - Look for natural groupings
-   - Find common themes
-   - Note unique descriptors
-   - Consider cross-venue applications
+##### Right Now Flow Implementation
+1. Initial Question: "Looking for something specific?"
+2. For each category, show only options that match existing selections within the current guide
+3. Users can skip any category to see all options
+4. Results update dynamically based on selections
 
-3. Develop Tagging Structure
-   - Create primary categories
-   - Define relationships between tags
-   - Establish hierarchy if needed
-   - Consider user search behavior
+##### Price Point
+- $ (Budget-friendly)
+- $$ (Mid-range)
+- $$$ (High-end)
+- $$$$ (Special occasion)
 
-[Note: Categories will be developed after collecting comprehensive descriptor lists to ensure organic, user-focused organization]
+##### Portion Style
+- Small plates
+- Shareable
+- Family style
+- Individual portions
+- Tasting menu
+
+##### Special Considerations
+- Gluten-free options
+- Dairy-free options
+- Vegetarian-friendly
+- Vegan-friendly
+- Allergy-conscious
+- Halal
+- Kosher
+
+##### Meal Periods
+- Breakfast/Brunch
+- Lunch
+- Dinner
+- Late-night
+- All-day
+
+##### Specialties
+- House-made pasta
+- Wood-fired pizza
+- Fresh seafood
+- Craft burgers
+- Seasonal menu
+- Raw bar
+- Dim sum
+- Omakase
+- Tableside preparation
+
+"Looking for something specific?"
+- Cuisine Type
+- Service Style
+- Space Type
+- Design/Atmosphere basics
+
+Guide makers can specify:
+- Price Point
+- Portion Style
+- Special Considerations
+- Meal Periods
+- Specialties
+
+### 4. Venue Classification System
+
+#### Bar/Nightlife Venues
+##### Theme/Concept
+- Speakeasy
+- Tiki
+- Sports bar
+- Brewery
+- Wine bar
+- Gastropub
+- Cocktail lounge
+- Pub
+- Dive
+- Jazz club
+- Piano bar
+
+##### Design
+- Industrial
+- Vintage
+- Modern
+- Upscale
+- Casual
+
+##### Atmosphere
+- Cozy
+- Intimate
+- Lively
+- Quiet conversation
+- Loud/energetic
+- Dimly lit
+- Bright
+- Moody
+- Sophisticated
+- Communal
+- Private
+- Spacious
+- Rowdy
+- Chill
+- Romantic
+
+##### Features/Activities
+- Pool table
+- Arcade
+- Game room
+- Dancing
+- Live music
+- Karaoke
+- Trivia night
+
+##### Space Characteristics
+- Rooftop
+- Underground
+- Outdoor seating
+- Patio
+- Beer garden
+
+##### Scene/Crowd
+- College crowd
+- Industry hangout
+- Local hangout
+- LGBTQ+
+- Date spot
+- Late-night
+
+#### Restaurant Venues
+##### Cuisine Type
+- American
+- Italian
+- Mexican
+- Chinese
+- Japanese
+- Thai
+- Indian
+- Mediterranean
+- French
+- Korean
+- Vietnamese
+- BBQ
+- Seafood
+- Steakhouse
+- Vegetarian/Vegan
+- Fusion
+
+##### Service Style
+- Fine dining
+- Casual dining
+- Fast casual
+- Counter service
+- Full service
+
+##### Space Type
+- Traditional restaurant
+- Food truck
+- Pop-up
+- Cafe
+- Bistro
+
+#### Guide Detail Tags
+##### Price Point
+- $ (Budget-friendly)
+- $$ (Mid-range)
+- $$$ (High-end)
+- $$$$ (Special occasion)
+
+##### Portion Style
+- Small plates
+- Shareable
+- Family style
+- Individual portions
+- Tasting menu
+
+##### Special Considerations
+- Gluten-free options
+- Dairy-free options
+- Vegetarian-friendly
+- Vegan-friendly
+- Allergy-conscious
+- Halal
+- Kosher
+
+##### Meal Periods
+- Breakfast/Brunch
+- Lunch
+- Dinner
+- Late-night
+- All-day
+
+##### Specialties
+- House-made pasta
+- Wood-fired pizza
+- Fresh seafood
+- Craft burgers
+- Seasonal menu
+- Raw bar
+- Dim sum
+- Omakase
+- Tableside preparation
+
+#### Right Now Flow Implementation
+1. Initial Question: "Looking for something specific?"
+2. For bars:
+   - Theme/Concept selection
+   - Design/Atmosphere preferences
+   - Features/Activities interests
+3. For restaurants:
+   - Cuisine Type selection
+   - Service Style preferences
+   - Space Type preferences
+4. Results update dynamically based on selections
+5. Guide details surface in results for additional filtering
+
+### 5. Technical Implementation
+
+#### Database Structure
+##### Venue Data
+1. Core Information
+   - Name
+   - Location/Area
+   - Hours
+   - Contact details
+   - Photos
+
+2. Classification Tags
+   - Theme/Concept tags
+   - Design tags
+   - Atmosphere tags
+   - Features/Activities
+   - Space characteristics
+   - Scene/Crowd tags
+
+3. Guide Details
+   - Price point
+   - Special considerations
+   - Meal periods (for restaurants)
+   - Specialties
+   - Guide's notes/tips
+   - Best times to visit
+   - Related recommendations
+
+##### User Data
+1. Profile Information
+   - Account basics
+   - Personal identifiers (private)
+   - Questionnaire responses
+   - Guide purchases/access
+
+2. Preferences
+   - Derived from questionnaires
+   - Updated through usage
+   - Location-specific choices
+
+#### UI Components
+##### Right Now Flow
+- Initial question card
+- Filter selection interface
+- Location radius selector
+- Results display
+
+##### Venue Cards
+- Background Image (blurred/dimmed)
+- Venue name
+- Primary tags/icons
+- Quick-view details
+- Match indicators
+
+### 6. Future Phase Features
+- Trip Planning: Extend Right Now flow for future dates
+- Visit Tracking: Personal history and recommendations
+- Guide Creation Tools: Interface for creating and managing guides
+- Social Features: Sharing and collaboration options
+
+### 7. TODO Next Steps
+#### Immediate Priority
+- [PRIORITY] Define MVP questionnaire format
+- [PRIORITY] Design Right Now flow UI
+- [PRIORITY] Develop venue tagging interface
+
+#### Next Phase
+- Create guide maker tools
+- Build recommendation engine
+- Design profile completion flow
+
+#### Documentation
+- Document questionnaire structure
+- Detail matching algorithm
+- Define guide creation process
+
+### 8. References
+- GitHub Repository: https://github.com/foodforcoinc/Travel-Guide-App
+- Project Board: [Link to project board]
+- Current Issues: See GitHub Issues tab
+- Flow Inspiration: https://philome.la/Coinc/sxsw-twine/play/index.html
