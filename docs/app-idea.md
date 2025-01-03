@@ -474,6 +474,68 @@ Never Shown:
 - Omakase
 - Tableside preparation
 
+## Prototype Development Requirements
+
+### Priority 1: Core Venue System
+1. Basic Venue Parameters
+   - Minimum required fields:
+     * Name
+     * Type (Food/Drinks/Both)
+     * Location (City, Area)
+     * Price Point ($-$$$$)
+     * Primary Tags (3-5)
+     * Secondary Tags (up to 5)
+   
+   - Initial Scale:
+     * 2-3 cities
+     * 30-50 venues per city
+     * Even distribution across types
+     * Natural price point spread
+
+2. Tag System Rules
+   - Primary Categories:
+     * Atmosphere
+     * Type/Style
+     * Features
+     * Scene
+   - Maximum tags per category
+   - Required category coverage
+
+### Priority 2: Basic Persona Framework
+1. Initial Guide Structure
+   - 3-5 guides per city
+   - 10-15 venues per guide
+   - Must include mix of:
+     * Food venues
+     * Drink venues
+     * Price points
+     * Areas/neighborhoods
+
+2. Preference System
+   - Core preference indicators
+   - Tag weight distribution
+   - Variation allowance
+   - Cross-venue patterns
+
+### Priority 3: Profile Generation
+1. Quick Start Response Mapping
+   - Tag assignment rules
+   - Weight by question type
+   - Minimum data points needed
+   - Profile completion metrics
+
+2. Match Calculation
+   - Direct venue overlap value
+   - Preference pattern matching
+   - Minimum match threshold
+   - Display requirements
+
+### Priority 4: Extended Features
+1. Additional Cities
+2. More Complex Patterns
+3. Profile Updates
+4. Refined Matching
+
 ## Technical Implementation
 
 ### Database Structure
