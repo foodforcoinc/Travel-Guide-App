@@ -1,17 +1,26 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { OnboardingStackParamList } from '../../navigation/OnboardingNavigator';
+
+type OnboardingStackParamList = {
+  Location: undefined;
+  CategorySelection: undefined;
+  VenueSelection: {
+    category: 'food' | 'drinks';
+    location: string;
+    isSecondCategory: boolean;
+  };
+  CategoryPrompt: undefined;
+  PreferenceQuestions: undefined;
+};
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, 'CategorySelection'>;
 
 export const CategorySelectionScreen: React.FC<Props> = ({ navigation, route }) => {
-  const { location } = route.params;
-
   const handleCategorySelect = (category: 'food' | 'drinks') => {
     navigation.navigate('VenueSelection', {
       category,
-      location,
+      location: 'Current Location', // This would come from location screen
       isSecondCategory: false
     });
   };
@@ -33,20 +42,4 @@ export const CategorySelectionScreen: React.FC<Props> = ({ navigation, route }) 
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    justifyContent: 'center',
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: '600',
-    marginBottom: 32,
-    textAlign: 'center',
-  },
-  buttonContainer: {
-    gap: 16,
-    alignItems: 'center',
-  },
-}); 
+const styles = StyleSheet.create({/* ... */}); 

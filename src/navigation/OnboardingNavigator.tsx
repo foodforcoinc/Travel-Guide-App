@@ -24,12 +24,12 @@ export type OnboardingStackParamList = {
 
 const Stack = createNativeStackNavigator<OnboardingStackParamList>();
 
-export const OnboardingNavigator: React.FC = () => {
+export const OnboardingNavigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        gestureEnabled: false,
+        gestureEnabled: false, // Prevent back swipe during onboarding
       }}
     >
       <Stack.Screen name="Location" component={LocationSelectionScreen} />

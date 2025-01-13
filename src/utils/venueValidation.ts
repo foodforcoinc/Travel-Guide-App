@@ -1,6 +1,5 @@
-import { type Venue } from '../types/venue';
-
 export const validateVenue = (venue: Partial<Venue>): boolean => {
+  // Core requirements for ANY venue
   const hasBasics = !!(
     venue.name &&
     venue.location &&

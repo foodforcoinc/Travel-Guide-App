@@ -6,7 +6,6 @@ rules:
     - "Maintain consistency with established privacy-focused approach"
     - "Follow the defined user journey and matching system design"
     - "Always assume we're working in a Windows Terminal"
-    - "Project path: C:\Users\clint\Desktop\temp-project\Travel-Guide-App"
 
   response_guidelines:
     - "Only provide reasoning when explicitly requested"
@@ -14,7 +13,6 @@ rules:
     - "Keep responses focused on direct solutions"
     - "Add context references at bottom of response if needed"
     - "Flag critical context gaps with [!]"
-    - "Always prefix terminal commands with full project path"
 
   interaction_scope:
     - "Focus responses on implementation details"

@@ -1,11 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, Button } from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import * as Location from 'expo-location';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { OnboardingStackParamList } from '../../navigation/OnboardingNavigator';
+
+type OnboardingStackParamList = {
+  Location: undefined;
+  CategorySelection: { location: string };
+  VenueSelection: {
+    category: 'food' | 'drinks';
+    location: string;
+    isSecondCategory: boolean;
+  };
+  CategoryPrompt: undefined;
+  PreferenceQuestions: undefined;
+};
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, 'Location'>;
 
+// Mock available cities for prototype
 const AVAILABLE_CITIES = [
   'New York',
   'Los Angeles',
@@ -13,7 +25,7 @@ const AVAILABLE_CITIES = [
   'Miami',
   'Austin',
   'San Francisco'
-] as const;
+];
 
 export const LocationSelectionScreen: React.FC<Props> = ({ navigation }) => {
   const [loading, setLoading] = useState(true);
@@ -63,7 +75,7 @@ export const LocationSelectionScreen: React.FC<Props> = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.header}>Select a City</Text>
       
-      {currentCity && AVAILABLE_CITIES.includes(currentCity as typeof AVAILABLE_CITIES[number]) && (
+      {currentCity && AVAILABLE_CITIES.includes(currentCity) && (
         <View style={styles.currentLocation}>
           <Text style={styles.subheader}>Current Location</Text>
           <Button

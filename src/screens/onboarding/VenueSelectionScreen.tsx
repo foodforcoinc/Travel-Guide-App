@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { OnboardingStackParamList } from '../../navigation/OnboardingNavigator';
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, 'VenueSelection'>;
 
@@ -13,12 +12,11 @@ export const VenueSelectionScreen: React.FC<Props> = ({ navigation, route }) => 
 
   const handleContinue = () => {
     if (isSecondCategory) {
+      // Both categories completed, move to preference questions
       navigation.navigate('PreferenceQuestions');
     } else {
-      navigation.navigate('CategoryPrompt', {
-        previousCategory: category,
-        location
-      });
+      // First category completed, prompt for second category
+      navigation.navigate('CategoryPrompt');
     }
   };
 
@@ -28,7 +26,8 @@ export const VenueSelectionScreen: React.FC<Props> = ({ navigation, route }) => 
         Select up to 7 {category} venues you enjoy in {location}
       </Text>
       
-      {/* Venue selection UI will go here */}
+      {/* Venue selection UI */}
+      
       <Text style={styles.counter}>
         {selectedVenues.length}/7 venues selected
       </Text>
@@ -41,22 +40,4 @@ export const VenueSelectionScreen: React.FC<Props> = ({ navigation, route }) => 
       )}
     </View>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-  },
-  header: {
-    fontSize: 20,
-    fontWeight: '600',
-    marginBottom: 16,
-    textAlign: 'center',
-  },
-  counter: {
-    fontSize: 16,
-    textAlign: 'center',
-    marginVertical: 16,
-  },
-}); 
+}; 

@@ -1,19 +1,19 @@
-import { type VenueDetails } from '../types/venue';
-
 interface VenueSearchResult {
-  id: string;
+  placeId: string;
   basicInfo: Partial<VenueDetails>;
 }
 
-export const searchVenues = async (
-  query: string,
-  filters?: Record<string, any>
+export const searchVenueByName = async (
+  name: string,
+  location: string
 ): Promise<VenueSearchResult[]> => {
-  return Promise.resolve([]);
+  // Integration with Google Places API or similar
+  // Returns venue suggestions with basic info
 };
 
 export const getVenueDetails = async (
-  id: string
+  placeId: string
 ): Promise<Partial<VenueDetails>> => {
-  return Promise.resolve({});
+  // Fetch detailed venue information
+  // Could use Google Places, Yelp, or other APIs
 }; 
