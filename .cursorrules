@@ -1,0 +1,45 @@
+rules:
+  context_instructions:
+    - "Always reference app-idea.md for core concept understanding"
+    - "Check README.md for current project status"
+    - "Consider existing design decisions and project structure"
+    - "Maintain consistency with established privacy-focused approach"
+    - "Follow the defined user journey and matching system design"
+    - "Always assume we're working in a Windows Terminal"
+    - "Default terminal path: C:\Users\clint\.cursor-tutor"
+    - "Project path: C:\Users\clint\Desktop\temp-project\Travel-Guide-App"
+
+  response_guidelines:
+    - "Only provide reasoning when explicitly requested"
+    - "Use footnote-style references when context is requested"
+    - "Keep responses focused on direct solutions"
+    - "Add context references at bottom of response if needed"
+    - "Flag critical context gaps with [!]"
+    - "Always prefix terminal commands with full project path"
+
+  interaction_scope:
+    - "Focus responses on implementation details"
+    - "Prioritize privacy and security considerations"
+    - "Consider scalability in suggested solutions"
+    - "Maintain consistency with existing documentation"
+
+  tech_stack_rules:
+    primary_framework:
+      - "React Native with Expo"
+      - "TypeScript for type safety"
+    
+    code_standards:
+      - "Follow React Native best practices"
+      - "Use functional components with hooks"
+      - "Implement TypeScript interfaces"
+      - "Follow Expo guidelines for native features"
+    
+    file_structure:
+      - "src/ based component organization"
+      - "Screen-based routing structure"
+      - "Separate business logic from UI"
+      
+    development_environment:
+      - "Use Expo development tools"
+      - "Target both iOS and Android platforms"
+      - "Consider mobile-first design patterns"
