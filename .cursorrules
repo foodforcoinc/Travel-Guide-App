@@ -6,7 +6,6 @@ rules:
     - "Maintain consistency with established privacy-focused approach"
     - "Follow the defined user journey and matching system design"
     - "Always assume we're working in a Windows Terminal"
-    - "Default terminal path: C:\Users\clint\.cursor-tutor"
     - "Project path: C:\Users\clint\Desktop\temp-project\Travel-Guide-App"
 
   response_guidelines:
