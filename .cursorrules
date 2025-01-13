@@ -5,8 +5,15 @@ rules:
     - "Consider existing design decisions and project structure"
     - "Maintain consistency with established privacy-focused approach"
     - "Follow the defined user journey and matching system design"
-    - "Always assume we're working in a Windows Terminal"
+    - "Always use bash syntax for terminal commands"
 
+  command_syntax:
+    - "Use semicolons (;) for command separation in terminal"
+    - "Always include full project path in commands"
+    - "Format terminal commands as: ```bash\ncd path ; command```"
+    - "Format file suggestions as: ```suggestion:filepath\ncontent```"
+    - "Avoid PowerShell-specific syntax like &&, -Path, etc"
+    
   response_guidelines:
     - "Only provide reasoning when explicitly requested"
     - "Use footnote-style references when context is requested"
