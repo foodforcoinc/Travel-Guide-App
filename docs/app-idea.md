@@ -207,8 +207,34 @@ Never Shown:
 
 #### Core Assumptions
 1. User Assumptions
+   - User has completed account creation and profile setup
+   - User has completed basic profile requirements
+   - User has already matched with one or more guide personas
+   - User has purchased access to at least one guide
+   - User is seeking immediate recommendations
+   - Users have basic familiarity with mobile apps
+   - Users are currently in supported cities
+   - Users value personalized recommendations
+   - Users prefer quality over quantity in recommendations
+   - Users appreciate authentic, local insights
+
 2. Technical Assumptions
+   - Users have reliable internet connectivity
+   - Device location services are available
+   - App can handle concurrent user sessions
+   - Real-time venue data updates are possible
+   - Cache management for offline access
+   - Access to user's purchase history and guide permissions
+   - Current location is available and verified within service area
+
 3. Content Assumptions
+   - Venues have consistent operating hours
+   - Basic venue information is accurate and updated
+   - Guide personas maintain active profiles
+   - Sufficient venue variety exists per category
+   - Content moderation is manageable
+   - Guides have provided sufficient recommendations for immediate needs
+   - Recommendations can be filtered based on current availability
 
 #### Implementation
 1. Initial Question: "Looking for something specific?"
