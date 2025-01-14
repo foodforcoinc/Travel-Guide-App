@@ -6,6 +6,7 @@ rules:
     - "Maintain consistency with established privacy-focused approach"
     - "Follow the defined user journey and matching system design"
     - "Always use bash syntax for terminal commands"
+    - "Check current project structure before making recommendations"
 
   command_syntax:
     - "Use semicolons (;) for command separation in terminal"
@@ -13,6 +14,11 @@ rules:
     - "Format terminal commands as: ```bash\ncd path ; command```"
     - "Format file suggestions as: ```suggestion:filepath\ncontent```"
     - "Avoid PowerShell-specific syntax like &&, -Path, etc"
+    - "Always run 'ls src/' before suggesting new files"
+    
+  project_structure:
+    check_command: "cd PROJECT_PATH ; ls src/"
+    required_check: true
     
   response_guidelines:
     - "Only provide reasoning when explicitly requested"

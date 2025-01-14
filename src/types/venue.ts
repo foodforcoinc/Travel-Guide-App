@@ -1,3 +1,5 @@
+export type DayOfWeek = 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday';
+
 // Shared Classifications
 export type Design = 
   | "industrial" | "vintage" | "modern" | "upscale" | "casual" | "rustic" 
@@ -176,4 +178,28 @@ export interface Venue extends VenueDetails {
   isActive: boolean;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface VenueType {
+  id: string;
+  name: string;
+  description: string;
+  imageUrl: string;
+  tags: string[];
+  category: 'Food' | 'Drinks';
+  classifications: {
+    design?: string[];
+    atmosphere?: string[];
+    features?: string[];
+    space?: string[];
+    scene?: string[];
+    theme?: string[];
+    cuisine?: string[];
+    service?: string[];
+    price?: '$' | '$$' | '$$$' | '$$$$';
+    portions?: string[];
+    considerations?: string[];
+    mealPeriods?: string[];
+    specialties?: string[];
+  };
 } 

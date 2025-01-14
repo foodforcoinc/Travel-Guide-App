@@ -1,5 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { VenueType } from '../types/venue';
 
 import { LocationSelectionScreen } from '../screens/onboarding/LocationSelectionScreen';
 import { CategorySelectionScreen } from '../screens/onboarding/CategorySelectionScreen';
@@ -16,10 +17,11 @@ export type OnboardingStackParamList = {
     isSecondCategory: boolean;
   };
   CategoryPrompt: {
-    previousCategory: 'food' | 'drinks';
-    location: string;
+    firstCategoryVenues: VenueType[];
   };
-  PreferenceQuestions: undefined;
+  PreferenceQuestions: {
+    selectedVenues: VenueType[];
+  };
 };
 
 const Stack = createNativeStackNavigator<OnboardingStackParamList>();

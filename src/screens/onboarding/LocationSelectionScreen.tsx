@@ -1,30 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator, Button } from 'react-native';
 import * as Location from 'expo-location';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-
-type OnboardingStackParamList = {
-  Location: undefined;
-  CategorySelection: { location: string };
-  VenueSelection: {
-    category: 'food' | 'drinks';
-    location: string;
-    isSecondCategory: boolean;
-  };
-  CategoryPrompt: undefined;
-  PreferenceQuestions: undefined;
-};
+import { OnboardingStackParamList } from '../../navigation/OnboardingNavigator';
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, 'Location'>;
 
 // Mock available cities for prototype
 const AVAILABLE_CITIES = [
-  'New York',
-  'Los Angeles',
-  'Chicago',
-  'Miami',
+  'San Francisco',
   'Austin',
-  'San Francisco'
+  'Chicago'
 ];
 
 export const LocationSelectionScreen: React.FC<Props> = ({ navigation }) => {
