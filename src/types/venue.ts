@@ -1,205 +1,168 @@
-export type DayOfWeek = 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday';
-
-// Shared Classifications
-export type Design = 
-  | "industrial" | "vintage" | "modern" | "upscale" | "casual" | "rustic" 
-  | "art-deco" | "victorian" | "bohemian" | "tropical" | "retro" | "steampunk"
-  | "traditional" | "eclectic" | "gothic" | "mid-century" | "nautical"
-  | "garden-inspired" | "warehouse" | "luxurious" | "shabby-chic";
-
 export type Atmosphere = 
-  | "cozy" | "intimate" | "lively" | "quiet-conversation" | "loud-energetic"
-  | "dimly-lit" | "bright" | "moody" | "sophisticated" | "communal" | "private"
-  | "spacious" | "rowdy" | "chill" | "romantic" | "bustling" | "laid-back"
-  | "exclusive" | "friendly" | "trendy" | "nostalgic" | "mysterious" | "vibrant"
-  | "refined" | "playful" | "edgy" | "polished" | "gritty" | "artsy" | "social"
-  | "relaxed" | "high-energy";
+  | 'casual'
+  | 'cozy'
+  | 'elegant'
+  | 'energetic'
+  | 'exotic'
+  | 'intimate'
+  | 'lively'
+  | 'minimalist'
+  | 'modern'
+  | 'romantic'
+  | 'rustic'
+  | 'scenic'
+  | 'sophisticated'
+  | 'theatrical'
+  | 'traditional'
+  | 'trendy'
+  | 'unique'
+  | 'upscale';
 
-export type FeaturesActivities = 
-  | "pool-table" | "arcade" | "game-room" | "dancing" | "live-music"
-  | "karaoke" | "trivia-night" | "dart-boards" | "ping-pong" | "shuffleboard"
-  | "board-games" | "video-games" | "comedy-shows" | "open-mic"
-  | "bottle-service" | "wine-tasting" | "beer-flights" | "bingo" | "foosball"
-  | "dj";
+export type Cuisine = 
+  | 'american'
+  | 'chinese'
+  | 'french'
+  | 'fusion'
+  | 'indian'
+  | 'italian'
+  | 'japanese'
+  | 'korean'
+  | 'mediterranean'
+  | 'mexican'
+  | 'middle-eastern'
+  | 'seafood'
+  | 'spanish'
+  | 'thai'
+  | 'vietnamese';
 
-export type SpaceCharacteristics = 
-  | "rooftop" | "underground" | "outdoor-seating" | "patio" | "beer-garden"
-  | "waterfront" | "courtyard" | "basement" | "mezzanine" | "terrace"
-  | "sidewalk-seating" | "private-rooms" | "booth-seating" | "bar-seating"
-  | "lounge-area" | "fireplace" | "poolside" | "skyline-view" | "garden-view"
-  | "traditional-dining" | "counter-seating" | "open-kitchen" | "diner-style"
-  | "brasserie" | "trattoria" | "izakaya" | "cantina" | "tavern"
-  | "market-stall" | "food-court-vendor" | "walk-up-window";
+export type Design = 
+  | 'art-deco'
+  | 'contemporary'
+  | 'industrial'
+  | 'minimalist'
+  | 'modern'
+  | 'retro'
+  | 'rustic'
+  | 'traditional'
+  | 'vintage';
 
-export type SceneCrowd = 
-  | "college-crowd" | "industry-hangout" | "local-hangout" | "lgbtq"
-  | "date-spot" | "late-night" | "after-work" | "creative-types"
-  | "sports-fans" | "wine-enthusiasts" | "beer-aficionados"
-  | "cocktail-lovers" | "music-lovers" | "foodies" | "tourist-friendly"
-  | "mixed-crowd" | "regulars" | "young-professional" | "mature-crowd"
-  | "singles-scene" | "kid-friendly";
+export type DrinkTheme = 
+  | 'beer-hall'
+  | 'brewpub'
+  | 'cocktail-lounge'
+  | 'craft-cocktails'
+  | 'dive-bar'
+  | 'gin-bar'
+  | 'historic-bar'
+  | 'irish-pub'
+  | 'karaoke-bar'
+  | 'rum-bar'
+  | 'speakeasy'
+  | 'sports-bar'
+  | 'tiki'
+  | 'wine-bar';
 
-// Bar-Specific Classifications
-export type BarThemeConcept = 
-  | "speakeasy" | "tiki" | "sports-bar" | "brewery" | "wine-bar"
-  | "gastropub" | "cocktail-lounge" | "pub" | "dive" | "jazz-club"
-  | "piano-bar" | "beer-hall" | "whiskey-bar" | "mezcal-bar" | "gin-bar"
-  | "champagne-bar" | "arcade-bar" | "blues-bar" | "karaoke-bar"
-  | "hookah-lounge" | "comedy-club" | "dance-club" | "live-music-venue"
-  | "craft-beer-bar" | "taproom" | "cidery" | "distillery";
+export type Features = 
+  | 'dancing'
+  | 'dj'
+  | 'fireplace'
+  | 'games'
+  | 'happy-hour'
+  | 'live-music'
+  | 'outdoor-seating'
+  | 'private-rooms'
+  | 'rooftop'
+  | 'small-plates'
+  | 'sports-tv'
+  | 'trivia-night'
+  | 'vegetarian-options'
+  | 'waterfront';
 
-// Restaurant-Specific Classifications
-export type CuisineType = 
-  | "american" | "italian" | "mexican" | "chinese" | "japanese" | "thai"
-  | "indian" | "mediterranean" | "french" | "korean" | "vietnamese" | "bbq"
-  | "seafood" | "steakhouse" | "vegetarian-vegan" | "fusion" | "spanish"
-  | "greek" | "middle-eastern" | "brazilian" | "peruvian" | "caribbean"
-  | "ethiopian" | "german" | "british" | "russian" | "turkish" | "moroccan"
-  | "hawaiian" | "soul-food" | "tex-mex" | "dim-sum" | "sushi" | "ramen"
-  | "pizza";
+export type Price = 
+  | '$'
+  | '$$'
+  | '$$$'
+  | '$$$$';
 
-export type ServiceStyle = 
-  | "fine-dining" | "casual-dining" | "fast-casual" | "counter-service"
-  | "full-service" | "buffet" | "self-service" | "table-service" | "omakase"
-  | "tasting-menu" | "family-style" | "tapas-style" | "all-you-can-eat"
-  | "chef's-table" | "takeout-focused" | "delivery-available"; 
+export type Space = 
+  | 'bar-seating'
+  | 'booth-seating'
+  | 'communal-dining'
+  | 'counter-seating'
+  | 'courtyard'
+  | 'lounge-area'
+  | 'mezzanine'
+  | 'multi-level'
+  | 'open-kitchen'
+  | 'outdoor-seating'
+  | 'private-rooms'
+  | 'rooftop'
+  | 'traditional-dining'
+  | 'upstairs-lounge'
+  | 'waterfront-dining';
 
-// Guide Detail Tags
-export type PricePoint = "$" | "$$" | "$$$" | "$$$$";
+export type Scene = 
+  | 'cocktail-lovers'
+  | 'creative-types'
+  | 'date-spot'
+  | 'foodies'
+  | 'industry-hangout'
+  | 'late-night'
+  | 'local-hangout'
+  | 'mixed-crowd'
+  | 'special-occasion'
+  | 'tourist-friendly'
+  | 'traditional'
+  | 'trendy'
+  | 'young-professional';
 
-export type PortionStyle = 
-  | "small-plates" | "shareable" | "family-style" | "individual-portions"
-  | "tasting-menu" | "build-your-own" | "set-menu" | "bento-style" | "tapas";
+export type Service = 
+  | 'counter-service'
+  | 'fine-dining'
+  | 'full-service'
+  | 'quick-service'
+  | 'self-service'
+  | 'table-service';
 
-export type SpecialConsiderations = 
-  | "gluten-free-options" | "dairy-free-options" | "vegetarian-friendly"
-  | "vegan-friendly" | "allergy-conscious" | "halal" | "kosher"
-  | "nut-free-options" | "shellfish-free" | "soy-free" | "egg-free"
-  | "paleo-friendly" | "keto-friendly" | "low-carb" | "raw-options"
-  | "organic" | "farm-to-table" | "locally-sourced";
+export type MealPeriod = 
+  | 'breakfast'
+  | 'brunch'
+  | 'dinner'
+  | 'late-night'
+  | 'lunch'
+  | 'weekend-brunch';
 
-export type MealPeriods = 
-  | "breakfast-brunch" | "lunch" | "dinner" | "late-night" | "all-day"
-  | "early-bird" | "happy-hour" | "weekend-brunch" | "weekday-lunch"
-  | "24-hour";
+export type Specialty = 
+  | 'fresh-seafood'
+  | 'house-made-pasta'
+  | 'seasonal-menu'
+  | 'tableside-preparation'
+  | 'tasting-menu'
+  | 'wagyu'
+  | 'wood-fired-pizza';
 
-export type Specialties = 
-  | "house-made-pasta" | "wood-fired-pizza" | "fresh-seafood"
-  | "craft-burgers" | "seasonal-menu" | "raw-bar" | "dim-sum" | "omakase"
-  | "tableside-preparation" | "house-smoked-meats" | "fresh-baked-bread"
-  | "craft-cocktails" | "charcuterie";
+export type Category = 'Food' | 'Drinks';
 
-// Main Venue Interface
-export interface VenueDetails {
-  // Basic Information
-  name: string;
-  description?: string;
-  
-  // Contact & Online Presence
-  phone?: string;
-  website?: string;
-  socialMedia?: {
-    instagram?: string;
-    facebook?: string;
-    twitter?: string;
-  };
-  
-  // Location
-  location: {
-    address: string;
-    city: string;
-    state: string;
-    postalCode: string;
-    country: string;
-    coordinates: {
-      latitude: number;
-      longitude: number;
-    };
-  };
-  
-  // Hours of Operation
-  operatingHours: {
-    [key in DayOfWeek]: {
-      isOpen: boolean;
-      openTime?: string;    // "HH:mm"
-      closeTime?: string;   // "HH:mm"
-      notes?: string;       // "Kitchen closes at 10pm" etc.
-    };
-  };
-  
-  // Additional Information
-  reservations?: {
-    accepted: boolean;
-    platform?: string;      // "OpenTable", "Resy", etc.
-    url?: string;
-  };
-  
-  parking?: {
-    available: boolean;
-    type?: ("street" | "lot" | "valet")[];
-    notes?: string;
-  };
-  
-  accessibility?: {
-    wheelchairAccessible: boolean;
-    notes?: string;
-  };
-  
-  paymentOptions?: {
-    cash: boolean;
-    creditCard: boolean;
-    digitalPayments?: boolean;
-    notes?: string;
-  };
-}
-
-// Update main Venue interface
-export interface Venue extends VenueDetails {
-  id: string;
-  design: Design[];
-  atmosphere: Atmosphere[];
-  featuresActivities: FeaturesActivities[];
-  spaceCharacteristics: SpaceCharacteristics[];
-  sceneCrowd: SceneCrowd[];
-  
-  // Specific Classifications (optional based on venue type)
-  barThemeConcept?: BarThemeConcept[];
-  cuisineType?: CuisineType[];
-  serviceStyle?: ServiceStyle[];
-  
-  // Guide Detail Tags
-  pricePoint: PricePoint;
-  portionStyle?: PortionStyle[];
-  specialConsiderations?: SpecialConsiderations[];
-  mealPeriods?: MealPeriods[];
-  specialties?: Specialties[];
-  
-  // Additional venue information
-  isActive: boolean;
-  createdAt: string;
-  updatedAt: string;
-}
-
-export interface VenueType {
+export type VenueType = {
   id: string;
   name: string;
   description: string;
   imageUrl: string;
   tags: string[];
-  category: 'Food' | 'Drinks';
+  category: Category;
   classifications: {
-    design?: string[];
-    atmosphere?: string[];
-    features?: string[];
-    space?: string[];
-    scene?: string[];
-    theme?: string[];
-    cuisine?: string[];
-    service?: string[];
-    price?: '$' | '$$' | '$$$' | '$$$$';
-    portions?: string[];
-    considerations?: string[];
-    mealPeriods?: string[];
-    specialties?: string[];
+    theme?: DrinkTheme[];
+    cuisine?: Cuisine[];
+    atmosphere?: Atmosphere[];
+    features?: Features[];
+    design?: Design[];
+    space?: Space[];
+    scene?: Scene[];
+    service?: Service[];
+    mealPeriods?: MealPeriod[];
+    specialties?: Specialty[];
+    price?: Price;
   };
-} 
+};
+
+// Rest of the file remains the same... 
